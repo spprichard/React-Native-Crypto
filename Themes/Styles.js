@@ -25,6 +25,9 @@ export default styles = StyleSheet.create({
         marginTop: 50,
         textAlign: 'center',
     },
+    CoinList: {
+        flex: 1,
+    },
     Coin : {
         flex: 1,
         flexDirection: 'row',
@@ -34,7 +37,7 @@ export default styles = StyleSheet.create({
         borderBottomWidth: 1,
     },
     CoinImage: {
-        width: 40,
-        height: 40,
+        width: 25,
+        height: 25,
     },
 });
