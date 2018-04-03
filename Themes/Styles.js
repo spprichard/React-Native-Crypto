@@ -22,7 +22,6 @@ export default styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     CoinTableHeader: {
-        marginTop: 50,
         textAlign: 'center',
     },
     Coin : {

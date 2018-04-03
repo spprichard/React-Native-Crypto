@@ -10,7 +10,6 @@ class CoinTable extends Component {
     render() {
         return (
             <View style={styles.CoinTable}>
-                <Text style={styles.CoinTableHeader}>Coin Prices</Text>
                 <CoinList coins={this.props.coins} />
             </View>
         )
