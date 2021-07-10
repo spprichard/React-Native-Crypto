@@ -1,4 +1,17 @@
+import './ReactotronConfig';
+import React from 'react';
+import { Provider }  from 'react-redux';
 import { AppRegistry } from 'react-native';
-import App from './App';
+import configureStore from './Store/store';
+import App from './Containers/App';
 
-AppRegistry.registerComponent('HelloWorld', () => App);
+const store = configureStore();
+
+const RNRedux = () => (
+    <Provider store={store}>
+        <App /> 
+    </Provider>
+)
+
+AppRegistry.registerComponent('HelloWorld', () =>  RNRedux);
+
