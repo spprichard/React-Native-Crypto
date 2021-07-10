@@ -3,17 +3,20 @@ import Styles from './../Themes/Styles';
 import CoinItem from './CoinItem';
 import {
     Text,
-    View
+    View,
+    FlatList,
   } from 'react-native';
 
 class CoinList extends Component {
     render() {
         return (
-            // TODO: use Flatlist instead
-            this.props.coins.map((coin) => {
-                return <CoinItem key={coin.name} coin={coin} />
-            })
-        );
+            <FlatList 
+                style={Styles.CoinList}
+                data={this.props.coins}   
+                keyExtractor={item => item.name }
+                renderItem={({item}) => <CoinItem coin={item}/>}
+            />
+        )
     }
 }
 
